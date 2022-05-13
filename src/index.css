@@ -1,13 +1,131 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+.header {
+  width: auto;
+  margin: auto;
+  object-fit: cover;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 55%;
+  max-width: 500px;
 }
+
+.container {
+  font-family: "Poppins", sans-serif;
+}
+
+.btn {
+color: white;
+border: none;
+font-family: "Poppins", sans-serif;
+display: inline-block;
+text-transform: uppercase;
+font-weight: bolder;
+background-color: #2d3092;
+
+}
+
+.btn:hover {
+  box-shadow: 0.25rem 0.25rem #39b549, -0.25rem -0.25rem; 
+}
+
+.card{
+  margin: auto;
+  text-align: center;
+  /* background-color: #f5f7f7; */
+  background-color: #e6f7ee;
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  border-radius: 5px;
+  padding: 5px 10px;
+  color: #2d3092;
+}
+
+.add-form {
+  margin: auto;
+  text-align: center;
+  padding: 20px;
+  color: #2d3092;
+}
+
+.form-field {
+  width: 100%;
+  margin: 8px 0;
+  border: 1px solid #2d3092;
+  border-radius: 4px;
+  padding-left: 15px;
+  font-family: "Poppins", sans-serif;
+}
+
+.form-field:focus {
+  border:2px solid #39b549;
+}
+
+.card:hover {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.footer {
+  color: #d4d4d4;
+  width: auto;
+  margin: auto;
+  text-align: center;
+  object-fit: cover;
+  font-family: "Poppins" sans-serif;
+  padding: 20px 40px;
+  padding-bottom: 130px;
+}
+
+@media screen and (min-width: 601px) {
+  div.card {
+    width: 50%;
+    font-size: 20px;
+  }
+
+  .btn {
+    font-size: 30px;
+    border-radius: 8px;
+    padding: 4px 16px;
+    box-shadow: 0.25rem 0.25rem #39b549, 0.25rem 0.25rem; 
+  }
+  .add-form {
+    width: 65%;
+  }
+  .form-field {
+    height:50px;
+    font-size: 25px;
+  }
+  .footer {
+    font-size: 20px;
+  }
+}
+
+/* If the screen size is 600px wide or less, set the font-size of <div> to 30px */
+@media screen and (max-width: 600px) {
+  div.card {
+    width: 85%;
+    font-size: 9px;
+  }
+
+.btn {
+    font-size: 15px;
+    border-radius: 5px;
+    padding: 5px 10px;
+    box-shadow: 0.15rem 0.15rem #39b549, 0.15rem 0.15rem; 
+  }
+  .add-form {
+    width: 85%;
+  }
+  .form-field {
+    height:25px;
+    font-size: 12px;
+  }
+  .footer {
+    font-size: 10px;
+  }
+}
+
