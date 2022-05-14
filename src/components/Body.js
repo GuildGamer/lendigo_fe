@@ -1,14 +1,27 @@
-import {useEffect, useState} from 'react';
+import {useState} from 'react';
 import Button from "./Button"
 import { api } from "../api"
-import Card from './Card';
+import List from './List';
 
 const Body = () => {
+    const [items, setItems] = useState([])
+
     async function submit(e){
+
         e.preventDefault()
-        const response = await api.service().fetch("http://127.0.0.1:8000/api/items?type="+data.search, true)
-        console.log(response.data)
-        return response.data
+        if(data.search !== ""){
+            const response = await api.service().fetch("http://127.0.0.1:8000/api/items?type="+(data.search.toLowerCase()), true)
+            console.log(response.data)
+            const items = response.data
+
+            const newItems = items
+            setItems(newItems)
+        } else
+        {
+            const newItems = ["empty"]
+            setItems(newItems)
+        }
+        
     }
 
     const [data, setData] = useState({
@@ -34,14 +47,18 @@ const Body = () => {
         setData(newdata)
     }
 
+    // const test = [{"item":"new", "type":"new", "title":"new"}]
+
     return (
+    <div>
     <form className="add-form" onSubmit={(e)=> submit(e)}>
         <div >
             <input onChange={(e)=>handle(e)} value={data.search} id="search" type='text' placeholder="Search Items" className="form-field"/>
-            <Button color = "#20c744" text="Search" />
-            {/* < Card /> */}
+            <Button color = "#20c744" />
         </div>
     </form>
+    <List items={items} />
+    </div>
     )
 }
 

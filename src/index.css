@@ -15,7 +15,10 @@
 }
 
 .container {
+  margin: auto;
   font-family: "Poppins", sans-serif;
+  width: 70%;
+  /* background-color: beige; */
 }
 
 .btn {
@@ -25,48 +28,65 @@ font-family: "Poppins", sans-serif;
 display: inline-block;
 text-transform: uppercase;
 font-weight: bolder;
-background-color: #2d3092;
+background-color: #e4eeae;
 
 }
 
 .btn:hover {
-  box-shadow: 0.25rem 0.25rem #39b549, -0.25rem -0.25rem; 
+  /* box-shadow: 0.25rem 0.25rem #b1b3b1;  */
+  box-shadow: 0 1px 2px 0 rgba(53, 48, 48, 0.822);
 }
 
 .card{
-  margin: auto;
+  margin: auto; 
   text-align: center;
   /* background-color: #f5f7f7; */
-  background-color: #e6f7ee;
+  background-color: #e4eeae;
   box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2);
-  transition: 0.3s;
-  border-radius: 5px;
-  padding: 5px 10px;
-  color: #2d3092;
+  transition: 0.7s;
+  border-radius: 15px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 10px 10px;
+  color: rgb(99, 96, 96);
 }
 
 .add-form {
   margin: auto;
   text-align: center;
-  padding: 20px;
+  /* padding: 20px; */
   color: #2d3092;
+  background-color: rgb(57, 134, 134);
+  border-radius: 10px;
+  padding: 10px 0px;
+}
+
+.no-items{
+  font-family: "Poppins", sans-serif;
+  font-size: 30px;
+  color: rgb(214, 214, 214);
+  width: 50%;
+  margin: auto; 
+  text-align: center;
+  padding: 30px;
 }
 
 .form-field {
-  width: 100%;
+  width: 50%;
   margin: 8px 0;
-  border: 1px solid #2d3092;
-  border-radius: 4px;
+  border: 1px solid #d1d8b7;
+  margin-right: 10px;
+  border-radius: 15px;
   padding-left: 15px;
   font-family: "Poppins", sans-serif;
 }
 
 .form-field:focus {
-  border:2px solid #39b549;
+  border: none; 
 }
 
 .card:hover {
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  box-shadow: 0 5px 10px 0 rgba(0,0,0,0.5);
 }
 
 .footer {
@@ -88,9 +108,9 @@ background-color: #2d3092;
 
   .btn {
     font-size: 30px;
-    border-radius: 8px;
+    border-radius: 15px;
     padding: 4px 16px;
-    box-shadow: 0.25rem 0.25rem #39b549, 0.25rem 0.25rem; 
+    /* box-shadow: 0.25rem 0.25rem #39b549, 0.25rem 0.25rem;  */
   }
   .add-form {
     width: 65%;
@@ -113,12 +133,12 @@ background-color: #2d3092;
 
 .btn {
     font-size: 15px;
-    border-radius: 5px;
+    border-radius: 15px;
     padding: 5px 10px;
-    box-shadow: 0.15rem 0.15rem #39b549, 0.15rem 0.15rem; 
+    /* box-shadow: 0.15rem 0.15rem #39b549, 0.15rem 0.15rem;  */
   }
   .add-form {
-    width: 85%;
+    width: 100%;
   }
   .form-field {
     height:25px;
