@@ -39,7 +39,7 @@ const List = ({items}) => {
             nextLinkClassName={"nextButton"}
             disabledClassName={"navigationDisabled"}
             activeClassName={"navigationActive"}
-        />;
+        />
   </>;
 }
 
