@@ -149,3 +149,38 @@ background-color: #e4eeae;
   }
 }
 
+/* PAGINATION */
+
+.navigationButtons {
+  width: 80%;
+  height: 40px;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  padding-top: 40px;
+}
+ 
+.navigationButtons a {
+  padding: 10px;
+  margin: 8px;
+  border-radius: 5px;
+  border: 3px solid rgb(57, 134, 134);
+  color: black;
+  cursor: pointer;
+}
+ 
+.navigationButtons a:hover {
+  color: grey;
+  background-color: #e4eeae;
+}
+ 
+.navigationActive a {
+  color: grey;
+  background-color: #e4eeae;
+}
+ 
+.navigationDisabled a {
+  color: grey;
+  background-color: grey;
+}

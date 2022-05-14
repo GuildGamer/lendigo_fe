@@ -7,9 +7,8 @@ const Body = () => {
     const [items, setItems] = useState([])
 
     async function submit(e){
-
         e.preventDefault()
-        if(data.search !== ""){
+        if(data.search !== "" || items.length !== 0){
             const response = await api.service().fetch("http://127.0.0.1:8000/api/items?type="+(data.search.toLowerCase()), true)
             console.log(response.data)
             const items = response.data
