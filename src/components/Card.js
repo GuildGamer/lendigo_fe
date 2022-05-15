@@ -1,27 +1,35 @@
 import propTypes from 'prop-types';
 
-const Card=({title, id, type}) =>{
+const Card=({item, detail}) =>{
+
+    if ({detail} === true){
+        return<>
+        {
+            item.map( (element) => 
+            <div>
+            <h3>{element}</h3>
+            </div>
+            )
+        }
+        </>
+    }
     return(
     <div className="card">
-            <h3>{title}</h3>
-            <h5>this is a {type}</h5>
-        </div>
-    
+            <h3>{item.title}</h3>
+            <h5>this is a {item.type}</h5>
+    </div>
     )
 }
 
 
 Card.defaultProps = {
-    id: 0,
-    title: "Default Title",
-    type: "Defaule Type"
+    item: [],
+    detail: false
 }
 
 Card.propTypes = {
-    id: propTypes.number,
-    type: propTypes.string,
-    title: propTypes.string
-    // onClick: propTypes.func,
+    item: propTypes.array,
+    detail: propTypes.bool
 }
 
 export default Card

@@ -8,13 +8,18 @@ const Body = () => {
 
     async function submit(e){
         e.preventDefault()
-        if(data.search !== "" || items.length !== 0){
+        if(data.search !== ""){
             const response = await api.service().fetch("http://127.0.0.1:8000/api/items?type="+(data.search.toLowerCase()), true)
             console.log(response.data)
             const items = response.data
 
-            const newItems = items
-            setItems(newItems)
+            if(items.length === 0){
+                const newItems = ["empty"]
+                setItems(newItems)
+            } else {
+                const newItems = items
+                setItems(newItems)
+            }
         } else
         {
             const newItems = ["empty"]
@@ -27,26 +32,11 @@ const Body = () => {
         search:"",
     })
 
-    // useEffect(
-    //     submit,
-    //     [submit]
-    //     );
-    
-    // changes state of input fields onClick of join us button
-    // function resetHandle(){
-    //     const newdata = {...data}
-    //     newdata["search"] = ""
-    //     setData(newdata)
-    //     // console.log(newdata)
-    // }
-
     function handle(e){
         const newdata = {...data}
         newdata[e.target.id] = e.target.value
         setData(newdata)
     }
-
-    // const test = [{"item":"new", "type":"new", "title":"new"}]
 
     return (
     <div>

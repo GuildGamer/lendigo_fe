@@ -4,6 +4,9 @@ import {useState} from 'react';
 import ReactPaginate from "react-paginate";
 
 const List = ({items}) => {
+
+    // create global state named itemValue using redux 
+
     const [page, setPage] = useState(0);
 
     const itemsPerPage = 5;
@@ -27,7 +30,12 @@ const List = ({items}) => {
       items.slice(
         numberOfItemsVistited, 
         numberOfItemsVistited + itemsPerPage
-        ).map( (item) => <Card title={item.title} id={item.id} type={item.type}/>)
+        ).map( (item) => 
+
+        // Add onlick event listener to change the state of itemValue
+        // use List to route Detail page
+        <Card item={item}
+        />)
     }
     <ReactPaginate 
             previousLabel = {"Previous"} 
