@@ -2,16 +2,16 @@ import axios from "axios";
 import { toast } from 'react-toastify';
 
 const axiosClient = axios.create();
-const isDev = process.env.ENV === "development";
+// const isDev = process.env.ENV === "development";
 
 class ServiceApi {
     url = "";
 
     // SELECT BASE URL VERSION
     service() {
-        axiosClient.defaults.baseURL = isDev ?
-            process.env.BASE_DEV_URL :
-            process.env.BASE_PROD_URL;
+        // axiosClient.defaults.baseURL = isDev ?
+        //     process.env.BASE_DEV_URL :
+        //     process.env.BASE_PROD_URL;
         return this;
     }
 
