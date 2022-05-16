@@ -1,5 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
+.remove-text-deco{
+  text-decoration: none;
+}
+
+.detail-list {
+  list-style: none;
+}
+
 .header {
   width: auto;
   margin: auto;
@@ -45,6 +53,7 @@ background-color: #e4eeae;
   box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2);
   transition: 0.4s;
   border-radius: 15px;
+  overflow-wrap: break-word;
   margin-top: 20px;
   margin-bottom: 20px;
   padding: 10px 10px;

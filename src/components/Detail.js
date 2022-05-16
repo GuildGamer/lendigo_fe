@@ -1,10 +1,15 @@
 import propTypes from 'prop-types';
 import Card from "./Card"
+import { useContext } from 'react';
+import { ItemContext } from '../Contexts/Context';
 
-const Detail = ({item}) => {
+const Detail = () => {
+
+    const { itemValue } = useContext(ItemContext)
+
     return (
         <div className="add-form">
-            <Card item = {item} detail={true}/>
+            <Card item = {itemValue} detail={true}/>
         </div>
     )
 }

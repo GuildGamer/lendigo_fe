@@ -1,9 +1,16 @@
 import propTypes from 'prop-types';
 import Card from './Card';
-import {useState} from 'react';
+import {useState, useContext} from 'react';
+import { ItemContext } from '../Contexts/Context';
 import ReactPaginate from "react-paginate";
+import "../index.css"
+
+import { Link } from 'react-router-dom';
 
 const List = ({items}) => {
+
+  const {setItemValue} = useContext(ItemContext)
+
 
     // create global state named itemValue using redux 
 
@@ -22,8 +29,8 @@ const List = ({items}) => {
     const changePage = ({ selected }) => {
         setPage(selected);
       };
+
       
-        
 
     return <>
     {
@@ -34,8 +41,12 @@ const List = ({items}) => {
 
         // Add onlick event listener to change the state of itemValue
         // use List to route Detail page
-        <Card item={item}
-        />)
+        <Link to="/item-details" className="remove-text-deco">
+          <div onClick={()=>{setItemValue(item)} }>
+          <Card item={item}/>
+          </div>
+        </Link>
+        )
     }
     <ReactPaginate 
             previousLabel = {"Previous"} 

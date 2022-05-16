@@ -1,17 +1,24 @@
 import propTypes from 'prop-types';
+import { useState } from 'react';
 
 const Card=({item, detail}) =>{
 
-    if ({detail} === true){
+    var arrayObj = Object.values(item);
+
+    if (detail === true){
+        
         return<>
         {
-            item.map( (element) => 
-            <div>
-            <h3>{element}</h3>
+            <div className="card">
+                {arrayObj.map((value) =>
+                    <ul className="detail-list">
+                        <li>
+                            {value} 
+                        </li>
+                    </ul>
+                )}
             </div>
-            )
-        }
-        </>
+        }</>
     }
     return(
     <div className="card">
